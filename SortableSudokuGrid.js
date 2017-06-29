@@ -50,6 +50,7 @@ class SortableSudokuGrid extends Component {
         columnCount: PropTypes.number.isRequired,
         dataSource: PropTypes.array.isRequired,
         renderCell: PropTypes.func.isRequired,
+        onTouchEnd: PropTypes.func,
         sortable: PropTypes.bool,
     }
 
@@ -334,6 +335,10 @@ class SortableSudokuGrid extends Component {
                 this._touchEnding = false
             },
         })
+
+        if (this.props.onTouchEnd) {
+            this.props.onTouchEnd(this.getSortedDataSource())
+        }
     }
 
     _getTouchCell = (touchCoordinate) => {
