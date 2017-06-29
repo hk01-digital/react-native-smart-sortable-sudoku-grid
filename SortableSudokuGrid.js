@@ -220,6 +220,11 @@ class SortableSudokuGrid extends Component {
         if (this._touchDown || !this.state.sortable) {
             return
         }
+
+        if (this.props.onTouchStart) {
+            this.props.onTouchStart()
+        }
+
         //console.log(`_onTouchStart not return...`)
         let { pageX, pageY, } = e.nativeEvent
         if (!this._responderTimer && !this._currentStartCell && !this._currentDraggingComponent && !this._isRemoving && !this._isAdding) {
