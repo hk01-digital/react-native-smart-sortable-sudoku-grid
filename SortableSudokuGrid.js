@@ -333,12 +333,12 @@ class SortableSudokuGrid extends Component {
                 this._currentStartCell = null
                 this._currentDraggingComponent = null
                 this._touchEnding = false
+
+                if (this.props.onTouchEnd) {
+                    this.props.onTouchEnd(this.getSortedDataSource())
+                }
             },
         })
-
-        if (this.props.onTouchEnd) {
-            this.props.onTouchEnd(this.getSortedDataSource())
-        }
     }
 
     _getTouchCell = (touchCoordinate) => {
