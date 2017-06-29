@@ -189,7 +189,7 @@ class SortableSudokuGrid extends Component {
                         return this._cells[index] = {key: data.title, index, coordinate, component,}
                     } }
                     {...this.props}
-                    key={data.title}
+                    key={index}
                     rowHeight={this._rowHeight}
                     columnWidth={this._columnWidth}
                     coordinate={coordinate}
