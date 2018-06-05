@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/react-native-component/react-native-smart-sortable-sudoku-grid#readme",
   "dependencies": {
-    "react-native-smart-timer-enhance": "^1.0.2"
+    "react-native-smart-timer-enhance": "^1.0.2",
+    "prop-types": "^15.5.10"
   }
 }

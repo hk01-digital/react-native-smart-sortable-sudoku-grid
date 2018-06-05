@@ -6,7 +6,6 @@
  */
 
 import React, {
-    PropTypes,
     Component,
 } from 'react'
 import {
@@ -16,6 +15,7 @@ import {
     Dimensions,
     Animated,
 } from 'react-native'
+import PropTypes from 'prop-types'
 
 import SortableCell from './SortableCell'
 import Utils from './Utils'
